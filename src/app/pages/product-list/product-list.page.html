@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>productList</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<!-- Default Segment -->
+<ion-segment (ionChange)="segmentChanged($event)">
+  <ion-segment-button value="fruit">
+    <ion-label>Fruit</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="vegetable">
+    <ion-label>Vegetable</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="vegetable">
+    <ion-label>Dairy</ion-label>
+  </ion-segment-button>
+</ion-segment>
+
+</ion-content>

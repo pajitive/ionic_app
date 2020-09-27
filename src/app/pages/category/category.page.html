@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-searchbar placeholder="Search for fruit, veggies and..."></ion-searchbar>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="cart"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row class="ion-margin-top">
+      <ion-col *ngFor="let item of categories">
+        <img src="../../../assets/images/fruit.png" alt="">
+        <ion-text class="category_name">{{item.name}}</ion-text>
+      </ion-col>
+    </ion-row>
+    <!-- <ion-row>
+      <ion-col>
+        <img src="../../../assets/images/veggies.png" alt="">
+        <ion-text class="category_name">veggies</ion-text>
+      </ion-col>
+      <ion-col>
+        <img src="../../../assets/images/beauty.png" alt="">
+        <ion-text class="category_name">beauty</ion-text>
+      </ion-col>
+    </ion-row> -->
+  </ion-grid>
+</ion-content>

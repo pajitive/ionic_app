@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-searchbar placeholder="Search for fruit, veggies and..."></ion-searchbar>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="cart"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-slides  #slides pager="true" [options]="slideOpts">
+    <ion-slide>
+      <img src="../../../assets/images/slide1.png" alt="">
+    </ion-slide>
+    <ion-slide>
+      <img src="../../../assets/images/slide2.png" alt="">
+    </ion-slide>
+  </ion-slides>
+
+  <ion-grid>
+    <ion-row class="ion-margin-top">
+      <ion-col *ngFor="let item of categories">
+        <img src="../../../assets/images/fruit.png" alt="" (click)="getProducts(item._id)">
+        <ion-text class="category_name">{{item.name}}</ion-text>
+      </ion-col>
+    </ion-row>
+
+    <ion-row  class="ion-margin-top">
+      <ng-container *ngFor="let i of products">
+        <ion-col>
+          <div>
+            <ion-card class="alone">
+                <ion-card-header>
+                  <ion-img src="../../../assets/images/fruit.png" alt=""></ion-img>
+                  <ion-card-title>{{i.productName}}</ion-card-title>
+                </ion-card-header>
+            </ion-card>
+          </div>
+        </ion-col>
+      </ng-container>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
